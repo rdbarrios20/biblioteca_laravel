@@ -65,5 +65,22 @@
     </head>
     <body>
     <h1>{{ $response }}</h1>
+    @foreach ($bitacora as $item)
+        <table>
+            <thead>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ $item->id }}</td>
+                    <td>{{ $item->rol }}</td>
+                    <td>{{ $item->id_usuario }}</td>
+                    <td>{{ $item->accion }}</td>
+                    <td>{{ $item->fecha }}</td>
+                    <td>{{ $item->detalle }}</td>
+                </tr>
+            </tbody>
+        </table>
+    @endforeach
     </body>
 </html>
