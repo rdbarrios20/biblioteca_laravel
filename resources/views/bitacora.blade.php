@@ -4,6 +4,11 @@
         @include('partial.head');
     </head>
     <body>
+        <header>
+            <div>
+                @include('partial.header');
+            </div>
+        </header>
         <div class="background">
             <br>
             <div class="busqueda">
