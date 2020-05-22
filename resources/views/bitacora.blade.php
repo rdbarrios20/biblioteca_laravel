@@ -4,7 +4,6 @@
         @include('partial.head');
     </head>
     <body>
-    <h1>{{ $response }}</h1>
         <div class="background">
             <br>
             <div class="busqueda">
