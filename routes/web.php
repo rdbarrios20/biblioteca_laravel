@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/bitacora','BitacoraC@bitacoraView');
+
+Route::get('/inventario','LibrosC@LibrosView');
