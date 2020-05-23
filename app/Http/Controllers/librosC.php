@@ -11,7 +11,7 @@ class LibrosC extends Controller
     public function LibrosView(){
         $data = Libros::get();
         $libros = [
-            'response'=>'Hello World'
+            'libros'=>$data
         ];
         return view('inventario')->with($libros);
     }
