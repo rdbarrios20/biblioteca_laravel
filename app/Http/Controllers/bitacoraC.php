@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\bitacora;
 use Illuminate\Http\Request;
 
-class bitacoraC extends Controller
+class BitacoraC extends Controller
 {
     //
     public function bitacoraView(Request $request){
-        $data  = bitacora::get();
+        $data  = Bitacora::get();
         $r = [
             'response'=>'hello world',
             'bitacora'=>$data
