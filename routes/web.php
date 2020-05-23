@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/bitacora','bitacoraC@bitacoraView');
+Route::get('/bitacora','BitacoraC@bitacoraView');
