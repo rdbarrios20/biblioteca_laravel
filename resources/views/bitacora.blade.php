@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('partial.head');
+        <title>Bitacora</title>
     </head>
     <body>
         <header>
