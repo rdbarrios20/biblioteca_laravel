@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        @include('partial.head');
+        @include('partial.head')
         <title>Bitacora</title>
     </head>
     <body>
         <header>
             <div>
-                @include('partial.header');
+                @include('partial.header')
             </div>
         </header>
         <div class="background">
