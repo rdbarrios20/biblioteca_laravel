@@ -4,6 +4,6 @@
     <link rel="stylesheet" href="{{asset('Estilos/styles.css')}}">
     <link rel="stylesheet" href="{{asset('fonts/style.css')}}">
 
-    <script src="Scripts/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="Scripts/bitacora.js"></script>
+    <script src="{{asset('Scripts/jquery-3.4.1.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('Scripts/bitacora.js')}}"></script>
