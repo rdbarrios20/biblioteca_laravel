@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class librosC extends Controller
+class LibrosC extends Controller
 {
     //
-    public function librosview(Request $request){
-        
-    }
 }
