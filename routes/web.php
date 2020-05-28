@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/bitacora','BitacoraC@bitacoraView')->name('bitacora');
-
+Route::get('/bitacora','BitacoraC@BitacoraView')->name('bitacora');
 Route::get('/inventario','LibrosC@LibrosView')->name('inventario');
+Route::get('/login','loginC@loginvalidate');
