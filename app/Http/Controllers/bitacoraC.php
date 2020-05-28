@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\bitacora;
+use App\Bitacora;
 use Illuminate\Http\Request;
 
 class BitacoraC extends Controller
 {
     //
-    public function bitacoraView(Request $request){
+    public function BitacoraView(Request $request){
         $data  = Bitacora::get();
         $r = [
             'response'=>'hello world',
