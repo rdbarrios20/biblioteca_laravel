@@ -1,7 +1,7 @@
 $(document).on('submit', '#login-form', function (event) {
     event.preventDefault();
     $.ajax({
-        url: 'php/login.php',
+        url: '/login-validate',
         type: 'POST',
         dataType: 'json',
         data: $(this).serialize(),
@@ -10,10 +10,11 @@ $(document).on('submit', '#login-form', function (event) {
         }
     })
         .done(function (respuesta) {
+            debugger;
             if (!respuesta.validation) {
                 if (respuesta.tipo == 'Administrador') {
                     $('.loading').fadeIn(3000).html(respuesta);
-                    location.href = 'inicio.php';
+                    location.href = '/inicio';
                 } else {
                     if (respuesta.tipo == '');
                     location.href = 'index.php';
