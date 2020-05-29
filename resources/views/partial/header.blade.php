@@ -7,7 +7,7 @@
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="inicio.php">Inicio<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link active" href="registro_libro.php">Registro Libro</a>
-        <a class="nav-item nav-link active" href="{{url('/inventario')}}">Inventario</a>
+            <a class="nav-item nav-link active" href="{{url('/inventario')}}">Inventario</a>
             <a class="nav-item nav-link active" data-toggle='modal' data-target='#close_page' href="">Salir</a>
             <a class="nav-item nav-link active" href="{{url('/bitacora')}}" >Bitacora</a>
         </div>
