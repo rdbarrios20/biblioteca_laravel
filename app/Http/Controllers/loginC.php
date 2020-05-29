@@ -13,7 +13,6 @@ class loginC extends Controller
     }
 
     public function loginValidate(Request $request){
-        // <var></var>
             // dd($request);
             $dbResponseLs = usuarios::where('usuario','=', $request->user)->limit(1)->get();
             //dd($dbResponseLs);
@@ -46,11 +45,5 @@ class loginC extends Controller
                 return response()->json('EL usauriio no existe');
             }
 
-
-            // $data = usuarios::get();
-            // $datos = [
-            //     'list'=>$data
-            // ];
-            // return view('login')->with($datos);
     }
 }
