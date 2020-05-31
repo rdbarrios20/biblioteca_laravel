@@ -17,7 +17,7 @@ $(document).on('submit', '#login-form', function (event) {
                     location.href = '/inicio';
                 } else {
                     if (respuesta.tipo == '');
-                    location.href = 'index.php';
+                    location.href = '/login';
                 }
             } else {
                 $('.error').slideDown('slow');
