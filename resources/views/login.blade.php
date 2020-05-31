@@ -12,6 +12,7 @@
         <span>Los datos ingresados son errados por favor verifique nuevamente</span>
     </div>
     <section>
+       <div class="login">
         <div class="container">
             <div id="login-row" class="row justify-content-center aling-items-center">
                 <div id="login-column" class="col-md-6">
@@ -53,6 +54,7 @@
                 </div>
             </div>
         </div>
+       </div>
     </section>
 </body>
 </html>
