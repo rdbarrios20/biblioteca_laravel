@@ -27,15 +27,15 @@ class loginC extends Controller
                 if($request->user == $dbResponseLs[0]->usuario 
                    && $request->pasword == $dbResponseLs[0]->password)
                 {   
-                    //Creo session terminal en php
-                    session('USUARIO_LOGGEADO', true);
+                    //Creo session en el servidor 
+                    $request->session()->put('USUARIO_LOGGEADO', true);
 
                     $response = [];
                     $response['validacion'] = true;
                     $response['tipo'] = 'Administrador';
 
+                    //  dd($response);
                     return response()->json($response);
-                    dd($response);
                 }else{
                     // var_dump('HELLO');
                     return response()->json('Datos incorrectos');
