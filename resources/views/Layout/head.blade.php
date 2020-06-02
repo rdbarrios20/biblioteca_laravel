@@ -8,3 +8,4 @@
     <script src="{{asset('Scripts/jquery-3.4.1.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('Scripts/bitacora.js')}}"></script>
+    <script src="{{ asset(Script/login.js) }}"></script>
