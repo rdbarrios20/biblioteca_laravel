@@ -15,10 +15,9 @@ class loginC extends Controller
             $usserIsLogged = $request->session()->get('USUARIO_LOGGEADO');
 
             if ($usserIsLogged === 'administrador') {
-                // return view('inicio');
-                return redirect('/inicio');
+                return redirect('inicio');
             } else {
-                //Objectivo
+                //Objectivo: renderizar la sigueinte vista
                 return view('login');
             }
         } else {
