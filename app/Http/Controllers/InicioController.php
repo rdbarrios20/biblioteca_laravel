@@ -24,8 +24,8 @@ class InicioController extends Controller
     }
 
     public function LogoutView(Request $request){
-        //$request->session()->flush();
-        //return redirect('/login');
+        $request->session()->flush();
+        return redirect('/login');
     }
 }
 
