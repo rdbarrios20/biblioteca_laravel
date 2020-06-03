@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Inicio</h1>
+    <a href="/logout">Cerrar Session</a>
 </body>
 </html>
