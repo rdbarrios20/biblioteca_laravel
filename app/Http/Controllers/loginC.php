@@ -16,7 +16,7 @@ class loginC extends Controller
 
             if ($usserIsLogged === 'administrador') {
                 // return view('inicio');
-                return redirect('inicio');
+                return redirect('/inicio');
             } else {
                 //Objectivo
                 return view('login');
