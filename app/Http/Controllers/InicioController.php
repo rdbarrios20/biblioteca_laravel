@@ -14,7 +14,7 @@ class InicioController extends Controller
             $usserIsLogged = $request->session()->get('USUARIO_LOGGEADO');
 
             if($usserIsLogged === 'administrador'){
-                return redirect('/inicio');
+                return redirect('inicio');
             }else{
                 return view('login');
             }
