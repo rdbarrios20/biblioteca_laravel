@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::get('/bitacora','BitacoraC@BitacoraView')->name('bitacora');
 Route::get('/inventario','LibrosC@LibrosView')->name('inventario');
-Route::get('/login','loginC@loginView');
-Route::post('/login-validate','loginC@loginValidate');
+Route::get('/login','loginC@loginView')->name('login');
+Route::post('/login-validate','loginC@loginValidate')->name('login-validate');
 Route::get('/inicio','InicioController@InicioView');
+Route::get('/logout','InicioController@LogoutView');
+
