@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     @include('layout.head')
-    <script src="{{asset('Scripts/login.js')}}"></script>
 </head>
 <body>
     <div class="error">
