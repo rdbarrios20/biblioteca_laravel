@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inventario</title>
-    @include('partial.head')
+    @include('layout.head')
 </head>
 <body>
     <header>
-        @include('partial.header')
+        @include('layout.header')
     </header>
     <section>
         <div>
