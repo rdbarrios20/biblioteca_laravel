@@ -82,7 +82,7 @@ class loginC extends Controller
             }
         } else {
             // var_dump('HELLO');
-            return response()->json('EL usauriio no existe');
+            return response()->json('EL usuario no existe');
         }
     }
 }
