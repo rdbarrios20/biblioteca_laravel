@@ -8,14 +8,25 @@ class InicioController extends Controller
 {
     //
     public function InicioView(Request $request){
-
-        $userIsLogged = $request->session()->get('USUARIO_LOGEADO',true);
-
-        dd($userIsLogged);
-        if($userIsLogged){
-            return view('inicio');
+        if ($request->session()->exists('USUARIO_LOGGEADO')) {
+            
+            $usserIsLogged = $request->session()->get('USUARIO_LOGGEADO');
+            // dd($usserIsLogged);
+            if($usserIsLogged === 'administrador'){
+                //Objectivo: renderizar la sigueinte vista
+                return view('inicio');
+            }else{
+                return redirect('/login');
+            }
         }else{
-            return view('login');
+            // return view('login');
+            return redirect('/login');
         }
     }
+
+    public function LogoutView(Request $request){
+        $request->session()->flush();
+        return redirect('/login');
+    }
 }
+

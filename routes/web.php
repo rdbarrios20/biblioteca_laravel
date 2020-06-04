@@ -18,7 +18,20 @@ Route::get('/', function () {
 });
 
 Route::get('/bitacora','BitacoraC@BitacoraView')->name('bitacora');
-Route::get('/inventario','LibrosC@LibrosView')->name('inventario');
-Route::get('/login','loginC@loginView');
-Route::post('/login-validate','loginC@loginValidate');
+
+Route::get('/libros','LibrosC@LibrosView')->name('bitacora');
+
+Route::post('/insert_libros','LibrosC@InsertLibro')->name('insert_libros');
+
+Route::get('/inventario','LibrosC@InventarioView')->name('inventario');
+
+Route::get('/login','loginC@loginView')->name('login');
+
+Route::post('/login-validate','loginC@loginValidate')->name('login-validate');
+
 Route::get('/inicio','InicioController@InicioView');
+
+Route::get('/logout','InicioController@LogoutView');
+
+
+

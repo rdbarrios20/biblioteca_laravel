@@ -12,7 +12,7 @@ $(document).on('submit', '#login-form', function (event) {
         .done(function (respuesta) {
             debugger;
             if (!respuesta.validation) {
-                if (respuesta.tipo == 'Administrador') {
+                if (respuesta.tipo == 'administrador') {
                     $('.loading').fadeIn(3000).html(respuesta);
                     location.href = '/inicio';
                 } else {

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     @include('layout.head')
-    <script src="{{asset('Scripts/login.js')}}"></script>
 </head>
 <body>
     <div class="error">
@@ -30,7 +29,7 @@
                                             <span class="input-group-text icon-users"></span>
                                         </div>
                                         <input type="text" name="user" pattern="[A-Za-z0-9_-]{1,15}" 
-                                        class="form-control" placeholder="Usuario" value="rafa" required>
+                                        class="form-control" placeholder="Usuario" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -40,7 +39,7 @@
                                             <span class="input-group-text icon-key"></span>
                                         </div>
                                         <input type="password" name="pasword" pattern="[A-Za-z0-9]{1,15}" class="form-control"
-                                         placeholder="****************" value="rafa" required>
+                                         placeholder="****************" required>
                                     </div>
                                 </div>
                                 <div class="form-group button">
