@@ -41,16 +41,41 @@ class loginC extends Controller
                 $request->user == $dbResponseLs[0]->usuario
                 && $request->pasword == $dbResponseLs[0]->password
             ) {
-                //Creo session en el servidor 
-                $request->session()->put('USUARIO_LOGGEADO', 'administrador');
-                //$request->session()->put('USUARIO_ROL', 'ADMINISTRADOR');
 
-                $response = [];
-                $response['validacion'] = true;
-                $response['tipo'] = 'Administrador';
 
-                // return redirect('/inicio');
-                return response()->json($response);
+                if ($dbResponseLs[0]->id_rol == '1') {
+                    //Creo session en el servidor 
+                    $request->session()->put('USUARIO_LOGGEADO', 'root');
+
+                    $response = [];
+                    $response['validacion'] = true;
+                    $response['tipo'] = 'Administrador';
+
+                    // return redirect('/inicio');
+                    return response()->json($response);
+                   
+                } elseif ($dbResponseLs[0]->id_rol == '2') {
+
+                    //Creo session en el servidor 
+                    $request->session()->put('USUARIO_LOGGEADO', 'administrador');
+
+                    $response = [];
+                    $response['validacion'] = true;
+                    $response['tipo'] = 'Administrador';
+
+                    // return redirect('/inicio');
+                    return response()->json($response);
+                } else {
+                    //Creo session en el servidor 
+                    $request->session()->put('USUARIO_LOGGEADO', 'usuario');
+
+                    $response = [];
+                    $response['validacion'] = true;
+                    $response['tipo'] = 'usuario';
+
+                    // return redirect('/inicio');
+                    return response()->json($response);
+                }
             } else {
                 // var_dump('HELLO');
                 return response()->json('Datos incorrectos');
