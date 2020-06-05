@@ -18,7 +18,7 @@ class LibrosC extends Controller
     }
 
     public function InventarioView(){
-        $data = Libros::get();
+        $data = libros::get();
         $libros = [
             'libros'=>$data
         ];
