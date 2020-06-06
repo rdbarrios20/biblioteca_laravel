@@ -9,3 +9,4 @@
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('Scripts/bitacora.js')}}"></script>
     <script src="{{ asset('Scripts/login.js') }}"></script>
+    <script src="{{ asset('Scripts/registro_libros.js') }}"></script>
