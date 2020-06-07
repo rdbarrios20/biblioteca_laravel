@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('Estilos/styles.css')}}">
     <link rel="stylesheet" href="{{asset('Estilos/login.css')}}">
-    <link rel="stylesheet" href="{{asset('fonts/loader.css')}}">
+    <link rel="stylesheet" href="{{asset('Estilos/loader.css')}}">
 
     <script src="{{asset('Scripts/jquery-3.4.1.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
