@@ -35,6 +35,7 @@
         <div class="container">
             <h1>Registro Libros</h1>
             <form class="background" id="formulario">
+                @csrf
                 <div class="form-group ">
                     <label for="">Código</label>
                     <input type="text" name="codigo" id="codigo" class="form-control" required>
