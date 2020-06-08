@@ -9,25 +9,30 @@ use Illuminate\Support\Facades\DB;
 class LibrosC extends Controller
 {
     public function InsertLibros(Request $request){
-        if($request('codigo') !==''){
-            DB::table('libros')->insert(
-                [
-                    'codigo_libro' => $request('codigo'),
-                    'autor' => $request('autor'),
-                    'nombre_libro' => $request('nombre_libro'),
-                    'fecha_expedicion' => $request('fecha_expedicion'),
-                    'disponibilidad' => $request('disponibilidad'),
-                    'precio_publico' => $request('precio_publico'),
-                    'precio_interno' => $request('precio_interno'),
-                    'reservado' => $request('reservado'),
-                    'cantidad' => $request('cantidad'),
-                    'id_categoria' => $request('id_categoria'),
-                ]
-            );
+            
+        if($request->codigo !==''){
 
-            $response = [];
-            $response['success'] = true;
-            $response['message'] = 'Datos guardados exitosamente';
+            DB::table('libros')->insert([
+                [
+                    'codigo_libro' => $request->codigo, 
+                    'autor' => $request->autor, 
+                    'nombre_libro' => $request->nombre_libro, 
+                    'fecha_expedicion' => $request->fecha_expedicion, 
+                    'disponibilidad' => $request->disponibilidad, 
+                    'precio_publico' => $request->precio_publico, 
+                    'precio_interno' => $request->precio_interno, 
+                    'reservado' => $request->reservado, 
+                    'cantidad' => $request->cantidad, 
+                    'id_categoria' => $request->id_categoria, 
+
+                ]
+            ]);
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Datos guardados correctamente'
+            ]);
+
         }
         else{
             return ('No se pudieron registrar los datos verifiquelos e intente de nuevo');
