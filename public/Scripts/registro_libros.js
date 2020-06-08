@@ -11,10 +11,12 @@ $(document).ready(function(){
         } else {
             //Enviamos los datos a la basde de Datos
             $.ajax({
-                url: '/insert_libros',
+                headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+                url: '/insert-libros',
                 type: 'POST',
                 dataType: 'json',
                 data: {
+                    _token: $('input[name=_token]').val(),
                     codigo: $('#codigo').val(),
                     autor: $('#autor').val(),
                     nombre_libro: $('#nombre_libro').val(),
@@ -24,7 +26,7 @@ $(document).ready(function(){
                     precio_interno: $('#precio_interno').val(),
                     reservado: $('#reservado').val(),
                     cantidad: $('#cantidad').val(),
-                    id_categoria: $('#id_categoria').val()
+                    id_categoria: $('#id_categoria').val(),
                 },
                 //Traemos la respuesta de retorno en caso de que los datos se guarden correctamente en formato json
                 success: function (response) {
@@ -58,6 +60,7 @@ $(document).ready(function(){
             $('#precio_interno').val('');
             $('#reservado').val('');
             $('#cantidad').val('');
+            $('#id_categoria').prop('selectedIndex', 0);
         }
     
     });
