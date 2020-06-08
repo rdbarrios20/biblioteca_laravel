@@ -29,9 +29,9 @@ Route::get('/login','loginC@loginView')->name('login');
 
 Route::post('/login-validate','loginC@loginValidate')->name('login-validate');
 
-Route::get('/inicio','InicioController@InicioView');
+Route::get('/inicio','InicioController@InicioView')->name('inicio');
 
-Route::get('/logout','InicioController@LogoutView');
+Route::get('/logout','InicioController@LogoutView')->name('logout');
 
 
 
