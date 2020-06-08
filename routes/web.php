@@ -21,7 +21,7 @@ Route::get('/bitacora','BitacoraC@BitacoraView')->name('bitacora');
 
 Route::get('/libros','LibrosC@LibrosView')->name('bitacora');
 
-Route::post('/insert_libros','LibrosC@InsertLibro')->name('insert_libros');
+Route::post('/insert-libros','LibrosC@InsertLibros')->name('insert_libros');
 
 Route::get('/inventario','LibrosC@InventarioView')->name('inventario');
 
