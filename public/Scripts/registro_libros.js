@@ -10,7 +10,6 @@ $(document).ready(function(){
             alert("Esta excediendo el precio que es de 1.000.000");
         } else {
             //Enviamos los datos a la basde de Datos
-            debugger;
             $.ajax({
                 url: '/insert_libros',
                 type: 'POST',
@@ -29,6 +28,7 @@ $(document).ready(function(){
                 },
                 //Traemos la respuesta de retorno en caso de que los datos se guarden correctamente en formato json
                 success: function (response) {
+                    debugger;
                     if (response.success == true) {
                         MENSAJE = response.message;
                         $("#message").html(MENSAJE);
